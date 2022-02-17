@@ -10,19 +10,19 @@ export function BuyingPage() {
             let res = await purchaseToken(form);
             if (!res.success) {
                 setAlert(true);
-                res.message = `${response?.message}: ${response?.error}`;
+                res.message = `${res?.message}: ${res?.error}`;
                 setResponse(res);
-                setTimeout(() => {
-                    setAlert(false);
-                }, 4000)
+                // setTimeout(() => {
+                //     setAlert(false);
+                // }, 4000)
             } else {
                 console.log(res);
-                res.message = `Your Token is: ${res.data.token}`;
+                res.message = `Token bought: ${res.data.token}`;
                 setAlert(true);
                 setResponse(res);
-                setTimeout(() => {
-                    setAlert(false);
-                }, 7000)
+                // setTimeout(() => {
+                //     setAlert(false);
+                // }, 7000)
             }
         } catch(e) {
             console.log(e);

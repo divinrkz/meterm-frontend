@@ -1,8 +1,8 @@
 Arguments: 
-  /home/divinirakiza/.nvm/versions/node/v16.13.2/bin/node /home/divinirakiza/.nvm/versions/node/v16.13.2/bin/yarn add cypress
+  /home/divinirakiza/.nvm/versions/node/v16.13.2/bin/node /home/divinirakiza/.nvm/versions/node/v16.13.2/bin/yarn add -D dom
 
 PATH: 
-  /home/divinirakiza/.nvm/versions/node/v16.13.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/divinirakiza/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/divinirakiza/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Java/jdk-11.0.14/bin:/mnt/c/xampp/php:/mnt/c/Users/divinirakiza/AppData/Local/ComposerSetup/bin:/mnt/c/Users/divinirakiza/AppData/Roaming/Composer/vendor/bin:/mnt/c/cygnus/cygwin-b20/H-i586-cygwin32/bin:/snap/bin
+  /tmp/yarn--1648122730270-0.21668553223313847:/home/divinirakiza/_workspaces/studies/testing-devops/cat2-term2/app/frontend/meterm-frontend/node_modules/.bin:/home/divinirakiza/.config/yarn/link/node_modules/.bin:/home/divinirakiza/.yarn/bin:/home/divinirakiza/.nvm/versions/node/v16.13.2/libexec/lib/node_modules/npm/bin/node-gyp-bin:/home/divinirakiza/.nvm/versions/node/v16.13.2/lib/node_modules/npm/bin/node-gyp-bin:/home/divinirakiza/.nvm/versions/node/v16.13.2/bin/node_modules/npm/bin/node-gyp-bin:/home/divinirakiza/bin:/home/divinirakiza/.cargo/bin:/home/divinirakiza/.nvm/versions/node/v16.13.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/divinirakiza/.cargo/bin:/mnt/c/Users/divinirakiza/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/divinirakiza/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Java/jdk-11.0.14/bin:/mnt/c/xampp/php:/mnt/c/Users/divinirakiza/AppData/Local/ComposerSetup/bin:/mnt/c/Users/divinirakiza/AppData/Roaming/Composer/vendor/bin:/mnt/c/cygnus/cygwin-b20/H-i586-cygwin32/bin:/mnt/c/Program Files/nodejs:/mnt/c/Users/divinirakiza/AppData/Roaming/npm:/mnt/c/Users/divinirakiza/AppData/Roaming/npm/node_module/@angular/cli/bin:/snap/bin
 
 Yarn version: 
   1.22.17
@@ -14,17 +14,18 @@ Platform:
   linux x64
 
 Trace: 
-  Error: https://registry.yarnpkg.com/cypress: ETIMEDOUT
+  Error: https://registry.yarnpkg.com/dom: ETIMEDOUT
       at Timeout._onTimeout (/home/divinirakiza/.nvm/versions/node/v16.13.2/lib/node_modules/yarn/lib/cli.js:141543:19)
       at listOnTimeout (node:internal/timers:557:17)
       at processTimers (node:internal/timers:500:7)
 
 npm manifest: 
   {
-    "name": "vite-react-tailwind",
+    "name": "meterm-frontend",
     "version": "0.0.0",
     "scripts": {
       "dev": "vite",
+      "test": "vitest",
       "build": "vite build",
       "serve": "vite preview"
     },
@@ -32,7 +33,9 @@ npm manifest:
       "axios": "^0.26.0",
       "react": "^17.0.2",
       "react-dom": "^17.0.2",
-      "react-router-dom": "^6.2.1"
+      "react-router-dom": "^6.2.2",
+      "react-test-renderer": "^17.0.2",
+      "vitest": "^0.3.6"
     },
     "devDependencies": {
       "@vitejs/plugin-react-refresh": "^1.3.6",
@@ -314,6 +317,18 @@ Lockfile:
       estree-walker "^2.0.1"
       picomatch "^2.2.2"
   
+  "@types/chai-subset@^1.3.3":
+    version "1.3.3"
+    resolved "https://registry.yarnpkg.com/@types/chai-subset/-/chai-subset-1.3.3.tgz#97893814e92abd2c534de422cb377e0e0bdaac94"
+    integrity sha512-frBecisrNGz+F4T6bcc+NLeolfiojh5FxW2klu669+8BARtyQv2C/GkNW6FUodVe4BroGMP/wER/YDGc7rEllw==
+    dependencies:
+      "@types/chai" "*"
+  
+  "@types/chai@*", "@types/chai@^4.3.0":
+    version "4.3.0"
+    resolved "https://registry.yarnpkg.com/@types/chai/-/chai-4.3.0.tgz#23509ebc1fa32f1b4d50d6a66c4032d5b8eaabdc"
+    integrity sha512-/ceqdqeRraGolFTcfoXNiqjyQhZzbINDngeoAq9GoHa8PPK1yNzTaxWjA6BFWp5Ua9JpXEMSS4s5i9tS0hOJtw==
+  
   "@types/parse-json@^4.0.0":
     version "4.0.0"
     resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
@@ -376,6 +391,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/arg/-/arg-5.0.1.tgz#eb0c9a8f77786cad2af8ff2b862899842d7b6adb"
     integrity sha512-e0hDa9H2Z9AwFkk2qDlwhoMYE4eToKarchkQHovNdLTCYMHZHeRjI71crOh+dio4K6u1IcwubQqo79Ga4CyAQA==
   
+  assertion-error@^1.1.0:
+    version "1.1.0"
+    resolved "https://registry.yarnpkg.com/assertion-error/-/assertion-error-1.1.0.tgz#e60b6b0e8f301bd97e5375215bda406c85118c0b"
+    integrity sha512-jgsaNduz+ndvGyFt3uSuWqvy4lCnIJiovtouQN5JZHOKCS2QuhEdbcQHFhVksz2N2U9hXJo8odG7ETyWlEeuDw==
+  
   autoprefixer@^10.4.0:
     version "10.4.2"
     resolved "https://registry.yarnpkg.com/autoprefixer/-/autoprefixer-10.4.2.tgz#25e1df09a31a9fba5c40b578936b90d35c9d4d3b"
@@ -433,6 +453,19 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001312.tgz#e11eba4b87e24d22697dae05455d5aea28550d5f"
     integrity sha512-Wiz1Psk2MEK0pX3rUzWaunLTZzqS2JYZFzNKqAiJGiuxIjRPLgV6+VDPOg6lQOUxmDwhTlh198JsTTi8Hzw6aQ==
   
+  chai@^4.3.6:
+    version "4.3.6"
+    resolved "https://registry.yarnpkg.com/chai/-/chai-4.3.6.tgz#ffe4ba2d9fa9d6680cc0b370adae709ec9011e9c"
+    integrity sha512-bbcp3YfHCUzMOvKqsztczerVgBKSsEijCySNlHHbX3VG1nskvqjz5Rfso1gGwD6w6oOV3eI60pKuMOV5MV7p3Q==
+    dependencies:
+      assertion-error "^1.1.0"
+      check-error "^1.0.2"
+      deep-eql "^3.0.1"
+      get-func-name "^2.0.0"
+      loupe "^2.3.1"
+      pathval "^1.1.1"
+      type-detect "^4.0.5"
+  
   chalk@^2.0.0:
     version "2.4.2"
     resolved "https://registry.yarnpkg.com/chalk/-/chalk-2.4.2.tgz#cd42541677a54333cf541a49108c1432b44c9424"
@@ -449,6 +482,11 @@ Lockfile:
     dependencies:
       ansi-styles "^4.1.0"
       supports-color "^7.1.0"
+  
+  check-error@^1.0.2:
+    version "1.0.2"
+    resolved "https://registry.yarnpkg.com/check-error/-/check-error-1.0.2.tgz#574d312edd88bb5dd8912e9286dd6c0aed4aac82"
+    integrity sha1-V00xLt2Iu13YkS6Sht1sCu1KrII=
   
   chokidar@^3.5.3:
     version "3.5.3"
@@ -518,6 +556,13 @@ Lockfile:
     integrity sha512-/zxw5+vh1Tfv+4Qn7a5nsbcJKPaSvCDhojn6FEl9vupwK2VCSDtEiEtqr8DFtzYFOdz63LBkxec7DYuc2jon6Q==
     dependencies:
       ms "2.1.2"
+  
+  deep-eql@^3.0.1:
+    version "3.0.1"
+    resolved "https://registry.yarnpkg.com/deep-eql/-/deep-eql-3.0.1.tgz#dfc9404400ad1c8fe023e7da1df1c147c4b444df"
+    integrity sha512-+QeIQyN5ZuO+3Uk5DYh6/1eKO0m0YmJFGNmFHGACpf1ClL1nmlV/p4gNgbl2pJGxgXb4faqo6UE+M5ACEMyVcw==
+    dependencies:
+      type-detect "^4.0.0"
   
   defined@^1.0.0:
     version "1.0.0"
@@ -740,6 +785,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/gensync/-/gensync-1.0.0-beta.2.tgz#32a6ee76c3d7f52d46b2b1ae5d93fea8580a25e0"
     integrity sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==
   
+  get-func-name@^2.0.0:
+    version "2.0.0"
+    resolved "https://registry.yarnpkg.com/get-func-name/-/get-func-name-2.0.0.tgz#ead774abee72e20409433a066366023dd6887a41"
+    integrity sha1-6td0q+5y4gQJQzoGY2YCPdaIekE=
+  
   glob-parent@^5.1.2, glob-parent@~5.1.2:
     version "5.1.2"
     resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-5.1.2.tgz#869832c58034fe68a4093c17dc15e8340d8401c4"
@@ -859,12 +909,24 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/lines-and-columns/-/lines-and-columns-1.2.4.tgz#eca284f75d2965079309dc0ad9255abb2ebc1632"
     integrity sha512-7ylylesZQ/PV29jhEDl3Ufjo6ZX7gCqJr5F7PKrqc93v7fzSymt1BpwEU8nAUXs8qzzvqhbjhK5QZg6Mt/HkBg==
   
+  local-pkg@^0.4.1:
+    version "0.4.1"
+    resolved "https://registry.yarnpkg.com/local-pkg/-/local-pkg-0.4.1.tgz#e7b0d7aa0b9c498a1110a5ac5b00ba66ef38cfff"
+    integrity sha512-lL87ytIGP2FU5PWwNDo0w3WhIo2gopIAxPg9RxDYF7m4rr5ahuZxP22xnJHIvaLTe4Z9P6uKKY2UHiwyB4pcrw==
+  
   loose-envify@^1.1.0:
     version "1.4.0"
     resolved "https://registry.yarnpkg.com/loose-envify/-/loose-envify-1.4.0.tgz#71ee51fa7be4caec1a63839f7e682d8132d30caf"
     integrity sha512-lyuxPGr/Wfhrlem2CL/UcnUc1zcqKAImBDzukY7Y5F/yQiNdko6+fRLevlw1HgMySw7f611UIY408EtxRSoK3Q==
     dependencies:
       js-tokens "^3.0.0 || ^4.0.0"
+  
+  loupe@^2.3.1:
+    version "2.3.4"
+    resolved "https://registry.yarnpkg.com/loupe/-/loupe-2.3.4.tgz#7e0b9bffc76f148f9be769cb1321d3dcf3cb25f3"
+    integrity sha512-OvKfgCC2Ndby6aSTREl5aCCPTNIzlDfQZvZxNUrBrihDhL3xcrYegTblhmEiCrg2kKQz4XsFIaemE5BF4ybSaQ==
+    dependencies:
+      get-func-name "^2.0.0"
   
   merge2@^1.3.0:
     version "1.4.1"
@@ -946,6 +1008,11 @@ Lockfile:
     resolved "https://registry.yarnpkg.com/path-type/-/path-type-4.0.0.tgz#84ed01c0a7ba380afe09d90a8c180dcd9d03043b"
     integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
   
+  pathval@^1.1.1:
+    version "1.1.1"
+    resolved "https://registry.yarnpkg.com/pathval/-/pathval-1.1.1.tgz#8534e77a77ce7ac5a2512ea21e0fdb8fcf6c3d8d"
+    integrity sha512-Dp6zGqpTdETdR63lehJYPeIOqpiNBNtc7BpWSLrOje7UaIsE5aY92r/AunQA7rsXvet3lrJ3JnZX29UPTKXyKQ==
+  
   picocolors@^1.0.0:
     version "1.0.0"
     resolved "https://registry.yarnpkg.com/picocolors/-/picocolors-1.0.0.tgz#cb5bdc74ff3f51892236eaf79d68bc44564ab81c"
@@ -1019,25 +1086,48 @@ Lockfile:
       object-assign "^4.1.1"
       scheduler "^0.20.2"
   
+  "react-is@^16.12.0 || ^17.0.0", react-is@^17.0.2:
+    version "17.0.2"
+    resolved "https://registry.yarnpkg.com/react-is/-/react-is-17.0.2.tgz#e691d4a8e9c789365655539ab372762b0efb54f0"
+    integrity sha512-w2GsyukL62IJnlaff/nRegPQR94C/XXamvMWmSHRJ4y7Ts/4ocGRmTHvOs8PSE6pB3dWOrD/nueuU5sduBsQ4w==
+  
   react-refresh@^0.10.0:
     version "0.10.0"
     resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.10.0.tgz#2f536c9660c0b9b1d500684d9e52a65e7404f7e3"
     integrity sha512-PgidR3wST3dDYKr6b4pJoqQFpPGNKDSCDx4cZoshjXipw3LzO7mG1My2pwEzz2JVkF+inx3xRpDeQLFQGH/hsQ==
   
-  react-router-dom@^6.2.1:
-    version "6.2.1"
-    resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.2.1.tgz#32ec81829152fbb8a7b045bf593a22eadf019bec"
-    integrity sha512-I6Zax+/TH/cZMDpj3/4Fl2eaNdcvoxxHoH1tYOREsQ22OKDYofGebrNm6CTPUcvLvZm63NL/vzCYdjf9CUhqmA==
+  react-router-dom@^6.2.2:
+    version "6.2.2"
+    resolved "https://registry.yarnpkg.com/react-router-dom/-/react-router-dom-6.2.2.tgz#f1a2c88365593c76b9612ae80154a13fcb72e442"
+    integrity sha512-AtYEsAST7bDD4dLSQHDnk/qxWLJdad5t1HFa1qJyUrCeGgEuCSw0VB/27ARbF9Fi/W5598ujvJOm3ujUCVzuYQ==
     dependencies:
       history "^5.2.0"
-      react-router "6.2.1"
+      react-router "6.2.2"
   
-  react-router@6.2.1:
-    version "6.2.1"
-    resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.2.1.tgz#be2a97a6006ce1d9123c28934e604faef51448a3"
-    integrity sha512-2fG0udBtxou9lXtK97eJeET2ki5//UWfQSl1rlJ7quwe6jrktK9FCCc8dQb5QY6jAv3jua8bBQRhhDOM/kVRsg==
+  react-router@6.2.2:
+    version "6.2.2"
+    resolved "https://registry.yarnpkg.com/react-router/-/react-router-6.2.2.tgz#495e683a0c04461eeb3d705fe445d6cf42f0c249"
+    integrity sha512-/MbxyLzd7Q7amp4gDOGaYvXwhEojkJD5BtExkuKmj39VEE0m3l/zipf6h2WIB2jyAO0lI6NGETh4RDcktRm4AQ==
     dependencies:
       history "^5.2.0"
+  
+  react-shallow-renderer@^16.13.1:
+    version "16.14.1"
+    resolved "https://registry.yarnpkg.com/react-shallow-renderer/-/react-shallow-renderer-16.14.1.tgz#bf0d02df8a519a558fd9b8215442efa5c840e124"
+    integrity sha512-rkIMcQi01/+kxiTE9D3fdS959U1g7gs+/rborw++42m1O9FAQiNI/UNRZExVUoAOprn4umcXf+pFRou8i4zuBg==
+    dependencies:
+      object-assign "^4.1.1"
+      react-is "^16.12.0 || ^17.0.0"
+  
+  react-test-renderer@^17.0.2:
+    version "17.0.2"
+    resolved "https://registry.yarnpkg.com/react-test-renderer/-/react-test-renderer-17.0.2.tgz#4cd4ae5ef1ad5670fc0ef776e8cc7e1231d9866c"
+    integrity sha512-yaQ9cB89c17PUb0x6UfWRs7kQCorVdHlutU1boVPEsB8IDZH6n9tHxMacc3y0JoXOJUsZb/t/Mb8FUWMKaM7iQ==
+    dependencies:
+      object-assign "^4.1.1"
+      react-is "^17.0.2"
+      react-shallow-renderer "^16.13.1"
+      scheduler "^0.20.2"
   
   react@^17.0.2:
     version "17.0.2"
@@ -1166,6 +1256,16 @@ Lockfile:
       quick-lru "^5.1.1"
       resolve "^1.22.0"
   
+  tinypool@^0.1.2:
+    version "0.1.2"
+    resolved "https://registry.yarnpkg.com/tinypool/-/tinypool-0.1.2.tgz#5b1d5f5bb403afac8c67000047951ce76342fda7"
+    integrity sha512-fvtYGXoui2RpeMILfkvGIgOVkzJEGediv8UJt7TxdAOY8pnvUkFg/fkvqTfXG9Acc9S17Cnn1S4osDc2164guA==
+  
+  tinyspy@^0.2.10:
+    version "0.2.10"
+    resolved "https://registry.yarnpkg.com/tinyspy/-/tinyspy-0.2.10.tgz#7f684504bda345620f7a6a8462c618ef3d055517"
+    integrity sha512-Qij6rGWCDjWIejxCXXVi6bNgvrYBp3PbqC4cBP/0fD6WHDOHCw09Zd13CsxrDqSR5PFq01WeqDws8t5lz5sH0A==
+  
   to-fast-properties@^2.0.0:
     version "2.0.0"
     resolved "https://registry.yarnpkg.com/to-fast-properties/-/to-fast-properties-2.0.0.tgz#dc5e698cbd079265bc73e0377681a4e4e83f616e"
@@ -1178,12 +1278,17 @@ Lockfile:
     dependencies:
       is-number "^7.0.0"
   
+  type-detect@^4.0.0, type-detect@^4.0.5:
+    version "4.0.8"
+    resolved "https://registry.yarnpkg.com/type-detect/-/type-detect-4.0.8.tgz#7646fb5f18871cfbb7749e69bd39a6388eb7450c"
+    integrity sha512-0fr/mIH1dlO+x7TlcMy+bIDqKPsw/70tVyeHW787goQjhmqaZe10uwLujubK9q9Lg6Fiho1KUKDYz0Z7k7g5/g==
+  
   util-deprecate@^1.0.2:
     version "1.0.2"
     resolved "https://registry.yarnpkg.com/util-deprecate/-/util-deprecate-1.0.2.tgz#450d4dc9fa70de732762fbd2d4a28981419a0ccf"
     integrity sha1-RQ1Nyfpw3nMnYvvS1KKJgUGaDM8=
   
-  vite@^2.7.2:
+  vite@^2.7.2, vite@^2.8.2:
     version "2.8.3"
     resolved "https://registry.yarnpkg.com/vite/-/vite-2.8.3.tgz#bb9b7f1f1446d2e538e81026f48d2fe9f1926963"
     integrity sha512-967klrEiG7HEsN7fQYYVETs5495Iu6GpI7YyxoO5yVTJCRxjV8HhWgNWKgrbazjoOB9DQuztL53/nUoNqHNsWg==
@@ -1194,6 +1299,19 @@ Lockfile:
       rollup "^2.59.0"
     optionalDependencies:
       fsevents "~2.3.2"
+  
+  vitest@^0.3.6:
+    version "0.3.6"
+    resolved "https://registry.yarnpkg.com/vitest/-/vitest-0.3.6.tgz#ae5e173b7c45b6e595cbba00f956739759bf9729"
+    integrity sha512-EzlAmGHDh/sQhzKeqDtEae6nlFM5pJKJefj5P2eUUmg6DcXL2Xj365M7eN29P2tMofzs+qZD/LW+d2wopfNl0g==
+    dependencies:
+      "@types/chai" "^4.3.0"
+      "@types/chai-subset" "^1.3.3"
+      chai "^4.3.6"
+      local-pkg "^0.4.1"
+      tinypool "^0.1.2"
+      tinyspy "^0.2.10"
+      vite "^2.8.2"
   
   xtend@^4.0.2:
     version "4.0.2"

@@ -23,8 +23,18 @@ const purchaseToken = (data) => {
     })
 }
 
+const checkToken = (token) => {
+  return axios.get(`${ENDPOINT}/tokens/by-token/${token}`)
+    .then(res => {  
+      return res.data;
+    }).catch((err) => {
+      return err.response.data
+    })
+}
+
 
 export {
   getTokens,
-  purchaseToken
+  purchaseToken,
+  checkToken
 };
