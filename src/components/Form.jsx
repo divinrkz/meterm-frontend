@@ -3,13 +3,10 @@ import React, {useState, useEffect} from 'react';
 
 export const Form = ({page=1, handleSubmit, formState, setFormState}) => {
 
-    useEffect(() => {
-        console.log(formState);
-    }, [])
 
    const handleChange = (e) => {
         var name = e.target.name;
-        var value = e.target.value;
+
         setFormState({...formState, [name]: e.target.value});
     }
     

@@ -1,7 +1,9 @@
 import React from 'react';
 
-export const Button = () => {
+export const Button = ({title}) => {
     return (
-        <React.Fragment></React.Fragment>
+        <React.Fragment>
+            <button>{title}</button>
+        </React.Fragment>
     )
 }
