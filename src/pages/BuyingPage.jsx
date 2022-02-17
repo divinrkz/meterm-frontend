@@ -7,13 +7,22 @@ export function BuyingPage() {
     const [alert, setAlert] = useState(false);
     const purchase = async () => {
         try {
-            const res = await purchaseToken(form);
+            let res = await purchaseToken(form);
             if (!res.success) {
                 setAlert(true);
-                setResponse(res)
+                res.message = `${response?.message}: ${response?.error}`;
+                setResponse(res);
                 setTimeout(() => {
                     setAlert(false);
                 }, 4000)
+            } else {
+                console.log(res);
+                res.message = `Your Token is: ${res.data.token}`;
+                setAlert(true);
+                setResponse(res);
+                setTimeout(() => {
+                    setAlert(false);
+                }, 7000)
             }
         } catch(e) {
             console.log(e);
@@ -36,9 +45,8 @@ export function BuyingPage() {
 
     return (
         <React.Fragment>
-        
              <section className={'container mt-10'}>
-             {alert ? <Alert success={response?.success} handleClose={closeAlert} message={`${response?.message}: ${response?.error}`}/> : null}
+             {alert ? <Alert success={response?.success} handleClose={closeAlert} message={`${response?.message}`}/> : null}
                  <h4 className="text-center mb-12 uppercase text-lg">Buying Electricity</h4>
                     <div className='w-4/12 mx-auto'>
                          <Form page={1} handleSubmit={purchase} formState={form} setFormState={setForm}/>

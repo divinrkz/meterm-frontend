@@ -4,7 +4,7 @@ export const Alert = ({success=false, message, handleClose}) => {
     
     return (
             <React.Fragment>
-                   <div className={((success) ? 'bg-emerald-300 ': 'bg-rose-500 ')  + ' flex justify-between w-4/12 mx-auto mb-8 relative text-white py-3 px-5 rounded-lg'}>
+                   <div className={((success) ? 'bg-teal-700 ': 'bg-rose-500 ')  + ' flex justify-between w-4/12 mx-auto mb-8 relative text-white py-3 px-5 rounded-lg'}>
                        <p>{message}</p>
 
                        <span className="mt-1 cursor-pointer" onClick={handleClose}>
