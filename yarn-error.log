@@ -1,0 +1,48 @@
+Arguments: 
+  /home/divinirakiza/.nvm/versions/node/v16.13.2/bin/node /home/divinirakiza/.nvm/versions/node/v16.13.2/bin/yarn
+
+PATH: 
+  /home/divinirakiza/.nvm/versions/node/v16.13.2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/usr/lib/wsl/lib:/mnt/c/Program Files/Common Files/Oracle/Java/javapath:/mnt/c/Windows/system32:/mnt/c/Windows:/mnt/c/Windows/System32/Wbem:/mnt/c/Windows/System32/WindowsPowerShell/v1.0/:/mnt/c/Windows/System32/OpenSSH/:/mnt/c/Program Files/Git/cmd:/mnt/c/Program Files/Docker/Docker/resources/bin:/mnt/c/ProgramData/DockerDesktop/version-bin:/mnt/c/Users/divinirakiza/AppData/Local/Microsoft/WindowsApps:/mnt/c/Users/divinirakiza/AppData/Local/Programs/Microsoft VS Code/bin:/mnt/c/Program Files/Java/jdk-11.0.14/bin:/mnt/c/xampp/php:/mnt/c/Users/divinirakiza/AppData/Local/ComposerSetup/bin:/mnt/c/Users/divinirakiza/AppData/Roaming/Composer/vendor/bin:/mnt/c/cygnus/cygwin-b20/H-i586-cygwin32/bin:/snap/bin
+
+Yarn version: 
+  1.22.17
+
+Node version: 
+  16.13.2
+
+Platform: 
+  linux x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/react: ETIMEDOUT
+      at Timeout._onTimeout (/home/divinirakiza/.nvm/versions/node/v16.13.2/lib/node_modules/yarn/lib/cli.js:141543:19)
+      at listOnTimeout (node:internal/timers:557:17)
+      at processTimers (node:internal/timers:500:7)
+
+npm manifest: 
+  {
+    "name": "vite-react-tailwind",
+    "version": "0.0.0",
+    "scripts": {
+      "dev": "vite",
+      "build": "vite build",
+      "serve": "vite preview"
+    },
+    "dependencies": {
+      "react": "^17.0.2",
+      "react-dom": "^17.0.2"
+    },
+    "devDependencies": {
+      "@vitejs/plugin-react-refresh": "^1.3.6",
+      "autoprefixer": "^10.4.0",
+      "postcss": "^8.4.5",
+      "tailwindcss": "^3.0.2",
+      "vite": "^2.7.2"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
